@@ -11,3 +11,4 @@ s = ["Jane" , "Kim"]
 
 a = solution(s)
 print(a)
+
