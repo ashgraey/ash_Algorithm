@@ -12,7 +12,10 @@ def solution(answers):
             maxlist[1] += 1
         if answers[i] == c[i % len(c)]:
             maxlist[2] += 1
-    result = max(maxlist[0] , maxlist[1], maxlist[2])
+    # result = max(maxlist[0] , maxlist[1], maxlist[2])
+    result = max(maxlist)
+    print(result)
+    # print(maxlist)
 
     for i in range(3):
         if result == maxlist[i]:
