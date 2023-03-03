@@ -13,25 +13,54 @@ s	return
 "a234"	false
 "1234"	true
 '''
+# 정확성 에러 뜸
+# def solution(s):
+#     number = []
+#     for i in range(10) :
+#         number.append(str(i))
+#     # print(number)
+
+#     for i in range(len(s)) :
+#         ck = False 
+#         for j in range(len(number)) :
+#             if s[i] == number[j] :
+#                 ck = True
+#                 break 
+        
+#         if ck == False :
+#             return False
+#     return True        
+    
+    
+#     # # 숫자만 있으면 True
+#     # if cnt == len(s) :
+#     #     return True
+#     # # 아니면 False
+#     # return False
+    
+# s = "3e10"
+# # s = "1234"
+# a = solution(s)
+# print(a)
+
+# 정답보고 풀기
 def solution(s):
-    number = []
-    for i in range(0, 10) :
-        number.append(str(i))
-    # print(number)
+    num = "0123456789"
 
-    cnt = 0 
-    for i in range(len(number)) :
-        if number[i] in s :
-            cnt += 1
+    for i in range(len(s)) :
+        if s[i] not in num :
+            print(s[i])
+            return False 
+        # return True
 
-    # 숫자만 있으면 True
-    if cnt == len(s) :
+    # 문자열길이가 4 or 6이고
+    # 문자열 길이가 4 or 6이 아니면 return False
+    # 문제를 잘 읽자
+    if len(s) == 4 or len(s) == 6 :
         return True
-    # 아니면 False
     return False
     
-
 s = "3e10"
-# s = "1234"
+s = "1234"
 a = solution(s)
 print(a)
