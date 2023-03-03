@@ -24,6 +24,5 @@ def solution(lottos, win_nums):
 lottos = [0, 0, 0, 0, 0, 0]
 win_nums = [31, 10, 45, 1, 6, 19]	
 
-
 result = solution(lottos , win_nums)
 print(result)

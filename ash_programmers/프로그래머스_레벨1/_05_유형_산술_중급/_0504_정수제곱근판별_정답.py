@@ -2,6 +2,7 @@
 
 import math
 def solution(n):
+    # 11.0 - 11 != 0
     if math.sqrt(n) - int(math.sqrt(n)) != 0:
         return -1
     else:

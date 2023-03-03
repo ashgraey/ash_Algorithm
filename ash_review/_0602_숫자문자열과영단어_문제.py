@@ -38,21 +38,10 @@ s	                result
 "2three45sixseven"	234567
 "123"	            123
 '''
-# in 키워드와 replace를 활용하자
 def solution(s):
     sample = ["zero" , "one" , "two" , "three" , "four" , "five" , "six" , "seven" , "eight" , "nine"]
 
-    for i in range(len(sample)) :
-        if sample[i] in s :
-            # print(sample[i])
-            idx = sample.index(sample[i])
-            # replace함수 사용시 정수를 str로 형변환해주어야한다.
-            s = s.replace(sample[i], str(idx))
-            # print(idx)
-    # 문자열을 int로 형변환
-    answer = int(s)
-
-    return answer
+    return 0
 
 s = "one4seveneight"
 
