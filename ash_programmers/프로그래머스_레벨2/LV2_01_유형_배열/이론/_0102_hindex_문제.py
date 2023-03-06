@@ -1,16 +1,7 @@
 
 
 def solution(rent):
-    mx = len(rent)
-
-    for i in range(len(rent)):
-        c = 0
-        for j in range(len(rent)):
-            if rent[j] >= mx :
-                c += 1
-            if c >= mx:
-                return mx
-        mx -= 1
+    
     return 0
 
 bookRent =  [3, 0, 6, 1, 5]
