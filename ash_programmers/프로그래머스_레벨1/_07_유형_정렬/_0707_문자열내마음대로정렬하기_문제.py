@@ -20,8 +20,19 @@ strings	                n	return
 # n이 기준이 되는 index
 # n 기준으로 정렬
 def solution(strings, n):
+    new = []
+    for i in strings :
+        new.append(i[n] + i) # *요구하는 인덱스의 값을 맨앞으로 보내기(정렬을 용이하게 하기 위함)*
+    new.sort()
+    # print(new)
+
+    answer = []
+    for i in new :
+        answer.append(i[1:]) # 슬라이싱 [1:] 시작인덱스부터 모든 값을 추출한다. 결과적으로 0인덱스 삭제
+    # print(answer)
+
     
-    return strings
+    return answer
 
 
 strings =["abce", "abcd", "cdx"]

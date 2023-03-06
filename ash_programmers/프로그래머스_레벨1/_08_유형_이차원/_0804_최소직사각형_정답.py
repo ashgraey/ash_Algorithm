@@ -9,10 +9,10 @@ def getMin(arr):
 
         m3 = max(t1[0] , t2[1])
         m4 = max(t1[1] , t2[0])
-        #print(m1 , " " , m2 , " " , m3 , " " , m4)
+        print(m1 , " " , m2 , " " , m3 , " " , m4)
         r1 = m1 * m2
         r2 = m3 * m4
-        #print(r1 , " " , r2)
+        # print(r1 , " " , r2)
         if r1 > r2:
             t1 = [m3, m4]
         else:

@@ -35,11 +35,47 @@ sizes	                                        result
 
 def solution(size):
     answer = 0
-
+    w = []
+    h = []
+    for i in range(len(size)) :
+        if size[i][0] > size[i][1] :
+            w.append(size[i][0])
+            h.append(size[i][1])
+        else :
+            w.append(size[i][1])
+            h.append(size[i][0])
+    
+    answer = max(w) * max(h)
+    
     return answer
 
 size = [[60, 50], [30, 70], [60, 30], [80, 40]]
 #size = [[3, 5], [6, 2]]
 result = solution(size)
 print(result)
+
+# 다른 사람 풀이
+# 원리를 이해하지는 못했으나 가로의 길이는 가로, 세로 길이 중 큰 값을 모은 리스트의 맥스 값
+# 세로의 길이는 가로, 세로 길이 중 작은 값을 모은 리스트의 맥스 값
+# def solution(sizes):
+#     w = []
+#     h = []
+#     for i in range(len(sizes)):
+#         if sizes[i][0] >= sizes[i][1]:
+#             w.append(sizes[i][0])
+#             h.append(sizes[i][1])
+#         else:
+#             h.append(sizes[i][0])
+#             w.append(sizes[i][1])
+
+#     print("w : ", w, "h : ", h)
+
+#     return max(w) * max(h)
+# sizes = [[60, 50], [30, 70], [60, 30], [80, 40]]
+# #size = [[3, 5], [6, 2]]
+# result = solution(sizes)
+# print(result)
+
+
+
 

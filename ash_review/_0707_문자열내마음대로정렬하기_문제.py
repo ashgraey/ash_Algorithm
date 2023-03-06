@@ -21,6 +21,7 @@ strings	                n	return
 # n 기준으로 정렬
 def solution(strings, n):
     
+    
     return strings
 
 
