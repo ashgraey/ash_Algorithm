@@ -27,7 +27,7 @@ import random
 n = random.randint(2, 5)
 print(n)
 arr = [[99 for j in range(n)] for i in range(n)]
-#print(arr)
+# print(arr)
 
 dir = "right" # right , down , left ,  up
 

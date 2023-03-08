@@ -11,6 +11,7 @@ def solution(n):
         # a = i
         # print(a)
         a = int(a)
+        # print(a)
         check = False
         for j in range(2 , a + 1):
             if i % j == 0:

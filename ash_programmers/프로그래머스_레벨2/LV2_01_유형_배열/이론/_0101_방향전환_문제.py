@@ -1,7 +1,7 @@
 """
     철수는 모두의 마블게임을 만들려고 한다.
     특이하게 배열의 크기를 조절가능하게 만들고싶다.
-    숫자n을 랜덤으로 저장하고 그크기에 맞는 2차원배열을 생성한다.
+    숫자n을 랜덤으로 저장하고 그 크기에 맞는 2차원배열을 생성한다.
     배열의 0,0의 위치에 숫자1을 저장하고 , 
     동남서북 방향으로 이동하며, 숫자를 1씩 증가하며 저장한다. 
     배열의 끝에 도착하면 방향은 바뀐다. 
@@ -26,6 +26,65 @@ import random
 
 n = random.randint(2, 5)
 print(n)
+
+# 좌표로 풀 생각을 못했다..
+# arr = []
+# num = 1
+# for i in range(1, n + 1) :
+#     for j in range(1, n + 1) :
+#         temp = []
+#         temp.append(num)
+#         arr.append(temp)
+#         num += 1 
+# # print(arr[0])
+# idx = 0
+# for i in range(n) :
+#     for j in range(n) :
+#         print(arr[idx], end = " ")
+#         idx += 1 
+#     print() 
+
+# 강사님 정답
+# var setting dir, y, x
+
+# 99를 먼저 채운다
+arr = [[99 for _ in range(n)]for _ in range(n)]
+print(arr)
+# print(arr[0][0])
+
+dir = "right"
+y = 0
+x = 0
+
+i = 1
+while True :
+    # print(y, x)
+    arr[y][x] = i
+
+    if dir == "right" and x + 1 >= n :
+        dir = "down"
+
+    if dir == "down" and y + 1 >= n :
+        dir = "left"
+
+    if dir == "left" and x - 1 < 0 :
+        dir = "up"
+
+    if dir == "up" and y - 2 < 0 :
+        break 
+    
+    if dir == "right" :
+        x += 1 
+    elif dir == "down" :
+        y += 1 
+    elif dir == "left" :
+        x -= 1 
+    elif dir == "up" :
+        y -= 1 
+    i += 1
+
+for i in arr :
+    print(i)
 
 
 
