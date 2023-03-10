@@ -12,20 +12,73 @@ M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0�
 
 '''
 # 시간초과남
+# import sys
+
+# N = int(sys.stdin.readline())
+# nList = list(map(int, sys.stdin.readline().split()))
+# M = int(sys.stdin.readline())
+# mList = list(map(int, sys.stdin.readline().split()))
+
+# for i in range(M) :
+#     ck = 0
+#     for j in range(N) :
+#         if mList[i] == nList[j] :
+#             ck = 1
+#             break
+#     if ck == 0 :
+#         print(ck)
+#     else : 
+#         print(ck)
+
 import sys
+# N = int(sys.stdin.readline())
+# # nList = [int(sys.stdin.readline()) for _ in range(N)]
+# # print(nList)
+# nList = list(map(int, sys.stdin.readline().split()))
+# M = int(sys.stdin.readline())
+# mList = list(map(int, sys.stdin.readline().split()))
+N = int(input())
+nList = set(map(int, input().split())) # 시간 탐색을 줄이기위해 set으로 받음, nList에서 중복이 되는 수는 제거하는게 시간 탐색이 빠름
+M = int(input())
+mList = list(map(int, input().split()))
 
-N = int(sys.stdin.readline())
-nList = list(map(int, sys.stdin.readline().split()))
-M = int(sys.stdin.readline())
-mList = list(map(int, sys.stdin.readline().split()))
+# print(nList) # set으로 받은 값
+# print(mList)
 
-for i in range(M) :
-    ck = 0
-    for j in range(N) :
-        if mList[i] == nList[j] :
-            ck = 1
-            break
-    if ck == 0 :
-        print(ck)
-    else : 
-        print(ck)
+# M의 값이 N에 있는지
+for i in mList :
+    if i in nList :
+        print("1")
+    else :
+        print("0")
+
+# 이분 탐색법을 이용한 답
+# 입력
+N = int(input())
+A = list(map(int, input().split()))
+M = int(input())
+arr = list(map(int, input().split()))
+A.sort()			# A 정렬
+
+# arr의 각 원소별로 이분탐색
+# for num in arr:
+#     lt, rt = 0, N - 1		# lt는 맨 앞, rt는 맨 뒤
+#     isExist = False		# 찾음 여부
+
+#     # 이분탐색 시작
+#     while lt <= rt:		# lt가 rt보다 커지면 반복문 탈출
+#         mid = (lt + rt) // 2	# mid는 lt와 rt의 중간값
+#         if num == A[mid]:	# num(목표값)이 A[mid]값과 같다면 (목표값 존재여부를 알았다면)
+#             isExist = True	# isExist Ture 변경
+#             print(1)		# 1 출력
+#             break		# 반복문 탈출
+#         elif num > A[mid]:	# A[mid]가 num보다 작으면
+#             lt = mid + 1	# lt를 높임
+#         else:			# A[mid]가 num보다 크다면
+#             rt = mid - 1	# rt를 낮춤
+
+#     if not isExist:		# 찾지 못한 경우
+#         print(0)		# 0 출력
+
+
+        

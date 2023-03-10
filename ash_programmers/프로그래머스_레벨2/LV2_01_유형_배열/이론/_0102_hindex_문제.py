@@ -1,15 +1,3 @@
-
-
-def solution(rent):
-    
-    return 0
-
-bookRent =  [3, 0, 6, 1, 5]
-#bookRent = [10000, 9999, 9998, 9997, 4]
-#bookRent = [0, 1, 2, 3, 4]
-result = solution(bookRent)
-print(result)
-
 """
 bookRent 는 책 대여횟수이다. 책은 총 5권이다.
 5권부터 1권씩 줄여가면서 책권수보다 배열전체를 검사해서 대여회수가 크거나 같으면 카운트를 한다.
@@ -32,6 +20,32 @@ bookRent 는 책 대여횟수이다. 책은 총 5권이다.
         3이상인수는 2
         2이상인수는 3 책2에서 종료 
 """
+
+def solution(rent):
+    size = len(rent)
+    # print(size)
+    for _ in range(len(rent)) :
+        cnt = 0 
+        for j in rent :
+            # print(j)
+            if j >= size :
+                cnt += 1 
+        # print(cnt)
+        if cnt >= size :
+            break
+        else :
+            size -= 1
+
+    return size
+
+    
+
+bookRent =  [3, 0, 6, 1, 5]
+# bookRent = [10000, 9999, 9998, 9997, 4]
+bookRent = [0, 1, 2, 3, 4]
+result = solution(bookRent)
+print(result)
+
 
 
 
