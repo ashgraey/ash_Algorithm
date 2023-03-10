@@ -2,9 +2,9 @@
 def solution(array, commands):
     answer = []
     for i in range(len(commands)):
-        a = commands[i]
+        a = commands[i] # 2차원배을 i를 변수에 담아서 쓰면 편하게 쓸수있구나!
         b = array[a[0] - 1 : a[1] ]
-        #print("b " , b)
+        # print("b " , b)
         b.sort()
         c = b[a[2]-1]
         # print(c)

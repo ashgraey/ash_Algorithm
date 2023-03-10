@@ -1,4 +1,5 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/72410
+# 카카오의 벽은 무섭구나 ㅋㅋㅋ
 def solution(new_id):
     answer = new_id
     return answer

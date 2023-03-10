@@ -6,10 +6,13 @@ def solution(d, budget):
     c = 0
     for i , v in enumerate(d):
         temp = sample + d[i]
+        # print(d[i])
         if temp > budget:
             break
         sample = temp
         c += 1
+    # for i in enumerate(d) :
+    #     print(i)
     return c
 
 d = [1,3,2,5,4]
