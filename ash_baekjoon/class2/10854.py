@@ -29,12 +29,41 @@ n = int(sys.stdin.readline())
 
 queList = []
 for i in range(n) :
-    que = sys.stdin.readline().split()
-
+    que = sys.stdin.readline().strip()
+    # print(que)
     if "push" in que :
         que = que.split(" ")
+        # print(que)
         queList.append(int(que[-1]))
+        # print(queList)
     
     if que == "pop" :
+        if len(queList) == 0 :
+            print(-1)
+        else :
+            print(queList[0])
+            del(queList[0])
+        
+    if que == "front" :
+        if len(queList) == 0 :
+            print(-1)
+        else :
+            print(queList[0])
+    
+    if que == "back" :
+        if len(queList) == 0 :
+            print(-1)
+        else :
+            print(queList[-1])
+    
+    if que == "empty" :
+        if len(queList) == 0 :
+            print(1)
+        else :
+            print(0)
+    
+    if que == "size" :
+        print(len(queList))
+    
 
 
