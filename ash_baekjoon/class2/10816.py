@@ -19,17 +19,83 @@
 '''
 
 import sys
+input = sys.stdin.readline
 
-# 제시되는 숫자 카드 N
-n = int(sys.stdin.readline())
-nList = list(map(int, sys.stdin.readline().split()))
+n = int(input())
+nList = [*map(int, input().split())]
+m = int(input())
+mList = [*map(int, input().split())]
 
-# 상근이 카드 M 
-m = int(sys.stdin.readline())
-mList = list(map(int, sys.stdin.readline().split()))
+# print(nList)
+# print(mList)
 
-start = 1 
-end = 
+# nList의 중복값을 딕셔너리에 저장
+dict = {}
+for i in nList :
+    if i in dict :
+        dict[i] += 1 
+    else :
+        dict[i] = 1
+
+# print(dict)
+for i in mList :
+    result = dict.get(i)
+    if result == None :
+        print(0, end = " ")
+    else :
+        print(result, end = " ")
+
+
+# # 이분탐색으로만 풀면 시간초과
+# n = int(sys.stdin.readline())
+# # n = 10
+# nList = sorted(list(map(int, sys.stdin.readline().split())))
+# # nList = [6, 3, 2, 10, 10, 10, -10, -10, 7, 3]
+# # # 상근이 카드 M 
+# m = int(sys.stdin.readline())
+# mList = list(map(int, sys.stdin.readline().split()))
+# # mList = [10, 9, -5, 2, 3, 4, 5, -10]
+
+# # nList.sort()
+# # print(nList)
+
+# def binary_search(arr, target, start, end) :
+#     while start <= end : 
+#         mid = (start + end) // 2
+
+#         if arr[mid] == target : 
+#             return nList.count(target)
+
+#         elif arr[mid] < target :
+#             start = mid + 1
+        
+#         else :
+#             end = mid - 1
+    
+#     return 0
+
+# for i in mList :
+#     print(binary_search(nList, i, 0, n - 1), end = " ")
+
+# # count함수를 썼지만 시간초과 ㅜㅜ
+# # 제시되는 숫자 카드 N
+# n = int(sys.stdin.readline())
+# nList = list(map(int, sys.stdin.readline().split()))
+# # nList = [6, 3, 2, 10, 10, 10, -10, -10, 7, 3]
+# # 상근이 카드 M 
+# m = int(sys.stdin.readline())
+# mList = list(map(int, sys.stdin.readline().split()))
+# # mList = [10, 9, -5, 2, 3, 4, 5, -10]
+
+# # print(set(nList))
+# for i in mList :
+#     if i in nList :
+#         print(nList.count(i), end = " ")
+#     else :
+#         print(0, end = " ")
+
+# start = 1 
+# end = 
 # cntList = []
 # for i in mList :
 #     cnt = 0 
