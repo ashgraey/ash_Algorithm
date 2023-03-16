@@ -10,24 +10,45 @@ output//
 
 '''
 # 시간초과 뜸
+# a, b = map(int, input().split())
+
+# if a > b:
+#     size = a
+# else:
+#     size = b
+
+# # 최대공약수
+# temp = []
+# for i in range(1, size):
+#     if a % i == 0 and b % i == 0:
+#         temp.append(i)
+# print(max(temp))
+
+# # 최소공배수
+# i = 1
+# while True:
+#     if i % a == 0 and i % b == 0:
+#         print(i)
+#         break
+#     i += 1
+
+
+import sys
+input = sys.stdin.readline
+
 a, b = map(int, input().split())
 
-if a > b:
-    size = a
-else:
-    size = b
+# 최대 공약수 <유클리드호제법>
+def gcd(a, b) :
+    while b > 0 : 
+        a, b = b, a % b
+        # print("a : ", a, "b : ", b)
+    return a
 
-# 최대공약수
-temp = []
-for i in range(1, size):
-    if a % i == 0 and b % i == 0:
-        temp.append(i)
-print(max(temp))
+# 최소 공배수 => a * b // 최대 공약수
+def lcm(a, b) :
+    # print(a, b)
+    return a * b // gcd(a, b)
 
-# 최소공배수
-i = 1
-while True:
-    if i % a == 0 and i % b == 0:
-        print(i)
-        break
-    i += 1
+print(gcd(a, b))
+print(lcm(a, b))

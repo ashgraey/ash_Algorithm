@@ -37,7 +37,7 @@ for i in nList :
     else :
         dict[i] = 1
 
-# print(dict)
+print(dict)
 for i in mList :
     result = dict.get(i)
     if result == None :

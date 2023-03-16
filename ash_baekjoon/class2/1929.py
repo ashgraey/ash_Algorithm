@@ -9,6 +9,14 @@ input//
 output//
 한 줄에 하나씩, 증가하는 순서대로 소수를 출력한다.
 '''
+'''
+에라토네스의 체
+소수 : 약수가 2개인 수(1과 자신)
+- 20이하의 소수
+=> 2 3 5 7 11 13 17 19
+
+합성수 : 약수가 3개인 수
+'''
 import sys
 import math
 
@@ -64,30 +72,49 @@ import math
 # for i in sosuList:
 #     print(i)
 
-def sosu(front, back):
-    # sList = []
-    i = front
-    while i <= back :
-        cnt = 0
-        j = 2 
-        while j <= math.sqrt(i) :
-            # print(math.sqrt(i))
-            if i % j == 0 :
-                cnt += 1 
-                break
-            j += 1 
+# def sosu(front, back):
+#     # sList = []
+#     i = front
+#     while i <= back :
+#         cnt = 0
+#         j = 2 
+#         while j <= math.sqrt(i) :
+#             # print(math.sqrt(i))
+#             if i % j == 0 :
+#                 cnt += 1 
+#                 break
+#             j += 1 
 
-        if cnt == 0 :
-            # sList.append(i)
-            print(i)
+#         if cnt == 0 :
+#             # sList.append(i)
+#             print(i)
         
-        i += 1 
+#         i += 1 
         
-    # return sList
+#     # return sList
 
-front, back = map(int, sys.stdin.readline().split())
-sosu(front, back)
+# front, back = map(int, sys.stdin.readline().split())
+# sosu(front, back)
 # sosuList = sosu(front, back)
 # for v in sosuList:
 #     print(v)
 # print(sosuList)
+
+
+import sys, math
+input = sys.stdin.readline
+
+def is_prime(a) :
+    if a == 1 :
+        return False 
+    
+    for i in range(2, int(math.sqrt(a)) + 1) :
+        # print("math : ", int(math.sqrt(a)))
+        if a % i == 0 :
+            return False
+    return True
+
+a, b = map(int, input().split())
+for i in range(a, b + 1) :
+    if is_prime(i) :
+        print(i)

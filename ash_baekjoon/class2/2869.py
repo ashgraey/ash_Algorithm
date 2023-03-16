@@ -42,5 +42,17 @@ A, B, V = map(int, sys.stdin.readline().split())
 #     day += 1 
 # print(day)
 
-day = (V - B) / (A - B)
-print(math.ceil(day)) # 소수가 나올 수 있으므로 반올림 해준다.
+# day = (V - B) / (A - B)
+# print(math.ceil(day)) # 소수가 나올 수 있으므로 반올림 해준다.
+
+day = (V - B) // (A - B)
+# print(day)
+
+if (V - B) == day :
+    print(day)
+else :
+    print(day + 1)
+# print(math.ceil(day)) # 소수가 나올 수 있으므로 반올림 해준다.
+
+# day = (V - B) / (A - B)
+# print(math.ceil(day))
