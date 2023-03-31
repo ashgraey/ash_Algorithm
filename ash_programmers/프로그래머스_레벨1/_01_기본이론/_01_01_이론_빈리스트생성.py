@@ -4,5 +4,5 @@
 test = [0 for i in range(5)]
 print(test)
 
-# test2 = [0] * 5
-# print(test2)
+test2 = [0] * 5
+print(test2)

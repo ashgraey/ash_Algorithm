@@ -12,4 +12,4 @@ test2 = a.find("z")  # -1
 print(test2)
 
 test3 = a.find("a")
-print(test3)
+print(test3) # 0

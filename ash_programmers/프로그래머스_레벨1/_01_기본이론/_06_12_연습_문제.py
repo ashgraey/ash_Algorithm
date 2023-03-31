@@ -12,18 +12,31 @@
 a = [1,5,7,8]
 b = [3,4,6]
 
-for i in range(len(b)) :
-    c = b[i] + 1 
-    d = b[i] - 1 
-
-    if c in a :
-        idx = a.index(c)
-        del(a[idx])
-    if d in a :
-        idx = a.index(d)
-        del(a[idx])
+# 3/31 한번 더 풀어보자
+for num in b :
+    num_min = num - 1 
+    num_pls = num + 1
+    if num_min in a :
+        idx1 = a.index(num_min)
+        del(a[idx1])
+    if num_pls in a :
+        idx2 = a.index(num_pls)
+        del(a[idx2])
 
 print(a)
+
+# for i in range(len(b)) :
+#     c = b[i] + 1 
+#     d = b[i] - 1 
+
+#     if c in a :
+#         idx = a.index(c)
+#         del(a[idx])
+#     if d in a :
+#         idx = a.index(d)
+#         del(a[idx])
+
+# print(a)
 
 
 

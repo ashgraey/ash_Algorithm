@@ -32,25 +32,35 @@ a = [
 
 b = [0,4,3,2,2,4,4]
 
-# 구상
-# b[i] == 세로 인데스
-# 0이 아니면 0으로 변경 0이면 더 이상 뽑을 인형이 없다.
+# 3/31 한번 더 풀어보자
 
-for i in range(len(b)) :
-    idx = b[i]
-    # print(idx, end = "=>")
-    cnt = 0
+for idx in b : 
     for j in range(len(a)) :
-        if a[j][idx] != 0 :
-            a[j][idx] = 0 
+        if a[j][idx] != 0 : 
+            a[j][idx] = 0
             break
-        else :
-            cnt += 1 
-        # print(a[j][idx], end = " ")
-    # print()
-
-    if cnt == len(a) :
-        print(idx, "인형이 없습니다.")
 
 for i in a :
     print(i)
+
+# 구상
+# b[i] == 세로 인데스
+# 0이 아니면 0으로 변경 0이면 더 이상 뽑을 인형이 없다.
+# for i in range(len(b)) :
+#     idx = b[i]
+#     # print(idx, end = "=>")
+#     cnt = 0
+#     for j in range(len(a)) :
+#         if a[j][idx] != 0 :
+#             a[j][idx] = 0 
+#             break
+#         else :
+#             cnt += 1 
+#         # print(a[j][idx], end = " ")
+#     # print()
+
+#     if cnt == len(a) :
+#         print(idx, "인형이 없습니다.")
+
+# for i in a :
+#     print(i)

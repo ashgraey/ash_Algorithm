@@ -7,13 +7,21 @@
 
 a = [1,5,7,8]
 b = [4,5,8]
+# 3/31 한번 더 풀어보자
 
-for i in range(len(b)) :
-    if b[i] in a :
-        idx = a.index(b[i])
+for num in b :
+    if num in a : 
+        idx = a.index(num)
         del(a[idx])
 
 print(a)
+
+# for i in range(len(b)) :
+#     if b[i] in a :
+#         idx = a.index(b[i])
+#         del(a[idx])
+
+# print(a)
 
 
 

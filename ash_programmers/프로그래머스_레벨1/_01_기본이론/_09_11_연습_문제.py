@@ -10,6 +10,7 @@
 
         둘이 같은수이면 정답은 0이다. 
 """
+import random
 
 a = [   
     [1,2,3],
@@ -17,6 +18,48 @@ a = [
     [7,8,9],
     [-1,0,-1]]
 
+# y,x 좌표값 
+# 1 : 0, 0
+# 3 : 0, 2
+
+# 7 : 2, 0
+# 3 : 0, 2
+
+
+def check(n1, n2) :
+    if n1 == n2 :
+        return 0
+    
+    for i in range(len(a)) :
+        for j in range(len(a[i])) :
+            if a[i][j] == n1 :
+                n1_y = i
+                n1_x = j
+            
+            if a[i][j] == n2 :
+                n2_y = i
+                n2_x = j
+        
+    # print(n1_y, n1_x)
+    # print(n2_y, n2_x)
+    y = n1_y - n2_y
+    x = n1_x - n2_x
+    if y < 0 :
+        y = -y
+    if x < 0 :
+        x = -x
+
+    return y + x
+
+    
 
 num1 = 0
 num2 = 0
+
+num1 = random.randint(0, 9)
+num2 = random.randint(0, 9)
+print(num1, num2)
+# num1 = 1
+# num2 = 1
+answer = check(num1, num2)
+print(answer)

@@ -26,6 +26,7 @@ while True:
     count *= 2
 # count 에 2를 계속 곱해주고 10의 값보다 같거나 커지면 종료한다. 
 print(count , " " , a)
+
 st = ""
 while True:
     st += str(a // count)

@@ -8,7 +8,7 @@ idx = a.index(20)
 print(idx) # 1 잘나온다.
 
 # idx2 = a.index(70) # 에러가 발생한다. 
-# 아래와 같이 in 키워드로 검사후레 index() 함수를 사용한다. 
+# 아래와 같이 in 키워드로 검사후 index() 함수를 사용한다. 
 if 70 in a:
     idx2 = a.index(70)
     print(idx2)

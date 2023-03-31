@@ -14,12 +14,17 @@
 """
 
 n = 12345
+
+arr_n = sorted(str(n), reverse=True)
+print(arr_n)
+
 s1 = str(n) # 12345 => "12345"
 arr = list(s1) # 문자열을 리스트로 변환 
 print(arr) # ['1', '2', '3', '4', '5']
 
 arr.reverse() # 뒤집기
 
+# map을 쓰면 반복문을 안 써도됨
 arr = map(int , arr) # 리스트의 값들을 전부 정수로 변환
 arr = list(arr) # 변환된 map을 다시 list로 변환 
 print(arr)

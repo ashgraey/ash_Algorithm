@@ -9,14 +9,26 @@
         소수를 구하는 방법은 수학적으론 현재까진 불가능하고 오로지 전부 나눠보는 방법밖에 없다. 
         이를 이용해서 암호를 개발한다.
 """
+# prime number란 약수 즉 나누어지는 수가 1, 자기자신인 수
 num = 6
-i = 1
-c = 0
-while i <= num:
-    if num % i == 0:
-        c += 1
-    i += 1
-if c == 2:
-    print("num : " , num , " 은 소수다.")
-else:
-    print("num : " , num , " 은 소수가 아니다.")
+
+cnt = 0
+for i in range(2, num + 1) :
+    if num % i == 0 :
+        cnt += 1 
+         
+if cnt == 1 :
+    print(num, "은 소수이다.")
+else :
+    print(num, "은 소수가 아니다.")
+
+# i = 1
+# c = 0
+# while i <= num:
+#     if num % i == 0:
+#         c += 1
+#     i += 1
+# if c == 2:
+#     print("num : " , num , " 은 소수다.")
+# else:
+#     print("num : " , num , " 은 소수가 아니다.")
