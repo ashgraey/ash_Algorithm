@@ -15,18 +15,67 @@
 출력
 각각의 Test case에 대해서 해당 집에 거주민 수를 출력하라.
 '''
+# k : 층, n : 호
 
+# import sys
+# input = sys.stdin.readline
 
-import sys
+tc = int(input())
 
-testCase = int(sys.stdin.readline())
-for _ in range(testCase) :
-    a, b = map(int, sys.stdin.readline())
+# answer = []
+for _ in range(tc) :
+    # aptList = [
+    # [1, 2, 3]
+    #        ]
+    
+    # idxList = [int(input()) for _ in range(2)]
 
-    apt = []
-    for i in range(a + 1) :
+    # k = idxList[0]
+    # n = idxList[1]
+
+    k = int(input())
+    n = int(input())
+    aptList = [[x for x in range(1, n + 1)]]
+    # print(aptList)
+
+    # print(aptList[0][0])
+    for i in range(k) :
         temp = []
-        for j in range(b) :
-            temp.append(j + 1)
+        for j in range(n) :
+            total = 0
+            for l in range(j+1) :
+                total += aptList[i][l]
+                # print(i, j)
+            temp.append(total)
+        aptList.append(temp)
+
+    # answer.append(aptList[k][n - 1])
+    print(aptList[k][n - 1])
+
+
+
+# import sys
+
+# testCase = int(sys.stdin.readline())
+# for _ in range(testCase) :
+#     a, b = map(int, sys.stdin.readline())
+
+#     apt = []
+#     for i in range(a + 1) :
+#         temp = []
+#         for j in range(b) :
+#             temp.append(j + 1)
         
-        apt.append(temp)
+#         apt.append(temp)
+
+# 인터넷 풀이
+# t = int(input())
+
+# for _ in range(t):  
+#     floor = int(input())  # 층
+#     num = int(input())  # 호
+#     f0 = [x for x in range(1, num+1)]  # 0층 리스트
+#     for k in range(floor):  # 층 수 만큼 반복
+#         for i in range(1, num):  # 1 ~ n-1까지 (인덱스로 사용)
+#             f0[i] += f0[i-1]  # 층별 각 호실의 사람 수를 변경
+#     print(f0[-1])  # 가장 마지막 수 출력

@@ -6,7 +6,8 @@
     1 1 2 3 5 8 13 ... 
 """
 
-n = 5
+# n = 5
+n = int(input())
 if n == 1 or n == 2:
     print(n)
 else:
