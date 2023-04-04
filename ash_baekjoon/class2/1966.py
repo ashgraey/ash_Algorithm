@@ -22,31 +22,59 @@
 출력
 각 테스트 케이스에 대해 문서가 몇 번째로 인쇄되는지 출력한다.
 '''
-# 인터넷 정답// 어렵다 다시 풀어야겠다
+# 0404 풀어보자
+# 조건문에 약해..
 import sys
 from collections import deque
 input = sys.stdin.readline
 
 tc = int(input())
-for _ in range(tc):
-    n, m = map(int, input().split())
-    que = deque(list(map(int, input().split())))    # 중요도
-    idx = deque(list(range(n)))                     # 인덱스
-    
-   
-    cnt = 0
-    while que:
-        if que[0] == max(que):      # 첫번째 요소가 최댓값이면
-            cnt += 1                # 카운트
-            que.popleft()           # pop
-            if idx.popleft() == m:  # 인덱스가 m과 같을 때
-                print(cnt)          # 카운트 값 출력
-        else:
-            que.append(que.popleft())   # 왼쪽 값 pop해 append
-            idx.append(idx.popleft())
+
+for _ in range(tc) :
+    size, idx = map(int, input().split())
+    arr = deque(map(int, input().split()))
+    idxList = deque([*range(size)]) # 인덱스 리스트를 따로 만들어야 하는게 point
+    # print(idxList)
+
+    cnt = 0 
+    # arr에 값이 있을 때까지 반복문을 돌림
+    while arr :
+        if arr[0] == max(arr) :
+            arr.popleft() # max값이 나올때마다 하나씩 제거, max의 값은 계속 바뀜
+            cnt += 1
+            if idxList.popleft() == idx :
+                print(cnt)
+                break
         
-        print(que)
-        print(idx)
+        else :
+            arr.append(arr.popleft())
+            idxList.append(idxList.popleft())
+
+# 인터넷 정답// 어렵다 다시 풀어야겠다
+# import sys
+# from collections import deque
+# input = sys.stdin.readline
+
+# tc = int(input())
+# for _ in range(tc):
+#     n, m = map(int, input().split())
+#     que = deque(list(map(int, input().split())))    # 중요도
+#     idx = deque(list(range(n)))                     # 인덱스
+#     print(idx)
+   
+#     cnt = 0
+#     while que:
+#         if que[0] == max(que):      # 첫번째 요소가 최댓값이면
+#             cnt += 1                # 카운트
+#             que.popleft()           # pop
+#             if idx.popleft() == m:  # 인덱스가 m과 같을 때
+#                 print(cnt)          # 카운트 값 출력
+#         else:
+#             que.append(que.popleft())   # 왼쪽 값 pop해 append
+#             idx.append(idx.popleft())
+        
+#         print(que)
+#         print(idx)
 
 # 중요도가 가장 높은 순서전의 인덱스는 큐의 뒤로 차례대로 보낸뒤 
 # 중요도가 높은 순으로 출력한다.
