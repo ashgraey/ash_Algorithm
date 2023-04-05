@@ -30,3 +30,40 @@ E	(46, 155)	5
 출력
 여러분은 입력에 나열된 사람의 덩치 등수를 구해서 그 순서대로 첫 줄에 출력해야 한다. 단, 각 덩치 등수는 공백문자로 분리되어야 한다.
 '''
+'''
+# 부록 : *(Asterisk)의 다양한 역할
+* 은 단순히 곱셈의 연산자 역할 뿐 아니라 다양한 역할으로 쓰인다.
+
+Unpacking 역할
+= 괄호 안에 있는 데이터를 풀어 각각으로 만들어 준다.
+'''
+import sys
+input = sys.stdin.readline
+
+def calc_rank(w, h, people) :
+    rank = 1
+    for p in people :
+        if p[0] > w and p[1] > h :
+            rank += 1 
+            # print(rank)
+    return rank
+
+
+n = int(input())
+nList = []
+for _ in range(n) :
+    x, y = map(int, input().split())
+    temp = [x, y]
+    nList.append(temp)
+
+# print(nList)
+ranks = []
+for i in nList : 
+    # print(i[0], i[1])
+    rank = calc_rank(i[0], i[1], nList)
+    ranks.append(rank)
+
+print(*ranks)
+# nList.sort(reverse = True)
+# for i in nList :
+#     print(i)
