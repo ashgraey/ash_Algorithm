@@ -19,4 +19,45 @@ output//
 첫째 줄에 지민이가 다시 칠해야 하는 정사각형 개수의 최솟값을 출력한다.
 '''
 
-# 문제 이해가 안됨 ㅜㅜ
+import sys
+input = sys.stdin.readline
+
+# 8 * 8 사이즈로 검사
+def min_repaint(arr, n, m) :
+    # print()
+    # for i in arr :
+    #     print(i)
+    count = []
+    for i in range(n - 7) :
+        for j in range(m - 7) :
+            draw1 = 0 
+            draw2 = 0
+
+            for k in range(i, i + 8) :
+                for l in range(j, j + 8) :
+                    if (k + l) % 2 == 0 :
+                        if arr[k][l] != "W" :
+                            draw1 += 1 
+                        if arr[k][l] != "B" :
+                            draw2 += 1 
+                    else :
+                        if arr[k][l] != "B" :
+                            draw1 += 1 
+                        if arr[k][l] != "W" :
+                            draw2 += 1
+            count.append(min(draw1, draw2))
+
+    return min(count)
+
+n, m = map(int, input().split())
+
+arr = []
+for _ in range(n) :
+    temp = input().strip()
+    arr.append(temp)
+
+
+answer = min_repaint(arr, n, m)
+print(answer)
+# for i in arr :
+#     print(i)
