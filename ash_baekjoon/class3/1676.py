@@ -19,13 +19,23 @@ result = str(result)
 # print(result)
 # for i in range(len(result)) :
 
-cnt = 0
-i = len(result) - 1
-while i > 0 : 
-    if result[i] == "0" : 
-        cnt += 1
-    else : 
-        break
-    i -= 1
+# cnt = 0
+# i = len(result) - 1
+# while i > 0 : 
+#     if result[i] == "0" : 
+#         cnt += 1
+#     else : 
+#         break
+#     i -= 1
 
+# print(cnt)
+
+cnt = 0 
+idx = -1
+for i in range(len(result)) :
+    if result[idx] == "0" :
+        cnt += 1 
+    else :
+        break
+    idx -= 1
 print(cnt)
