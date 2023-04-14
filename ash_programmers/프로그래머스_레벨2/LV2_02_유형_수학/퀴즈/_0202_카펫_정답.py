@@ -14,13 +14,17 @@ def solution(brown, yellow):
     i = 1
     garo = 0
     sero = 0
+    # sqrt 제곱근으로 약수를 구하기
+    # 약수의 앞부분만 구하면 뒷부분은 구하지 않아도 된다. 왜냐하면 앞부분의 몫이 곧 뒷부분이기 때문에
     sqrt = math.sqrt(yellow)
     sqrt = int(sqrt)
+    print(sqrt)
     while i <= sqrt:
         if yellow % i == 0:
             sero = i
             garo = yellow // sero
-            #print(sero , garo)          
+            print(sero , garo)
+            # bc는 brown의 블록 갯수를 구하는 함수          
             bc = getBrownCount(garo , sero)
             if bc == brown :
                 answer = [garo + 2 , sero + 2]
@@ -29,8 +33,8 @@ def solution(brown, yellow):
     return answer
 
 
-brown = 24
-yellow = 24
+brown = 8
+yellow = 1
 r = solution(brown , yellow)
 print(r)
 

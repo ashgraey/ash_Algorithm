@@ -4,11 +4,37 @@
 def solution(brown, yellow):
     answer = []
     
+    # 노란색이 1이면 경우의 수는 하나밖에 없음
+    if yellow == 1 :
+        answer = [3, 3]
+        return answer
+    
+    # 노란색의 약수
+    y_arr = []
+    for i in range(1, yellow + 1) :
+        if yellow % i == 0 :
+           y_arr.append(i)
+    # print(y_arr)
+    # yellow의 가로, 세로 경우의 수
+    arr = []
+    j = -1
+    for i in range(len(y_arr) // 2) :
+        arr.append([y_arr[i], y_arr[j]])
+        j -= 1
+    # print(arr)
+
+    # 갈색의 가로, 세로는 노란색의 가로 + 2, 세로 + 2
+    # 갈색의 갯수 구하기 노란색 가로 * 2 + 세로 * 2 + 4(모서리) => 이 공식이 가장 중요함 
+    for i in range(len(arr)) :
+        if (arr[i][0] * 2) + (arr[i][1] * 2) + 4 == brown :
+            answer = [arr[i][1] + 2, arr[i][0] + 2]
+            break
     return answer
 
 
 brown = 24
 yellow = 24
+
 r = solution(brown , yellow)
 print(r)
 
