@@ -1,7 +1,23 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/12949
+
 def solution(arr1, arr2):
+    # 행렬을 곱한 새로운 배열을 0으로 초기화
+    newArr = [[0 for col in range(len(arr2[0]))] for row in range(len(arr1))]
+#     for new in newArr :
+#         print(new)
+
+        # 엄청 헷갈리네 이거;;
+    for i in range(len(newArr)) :
+        for j in range(len(newArr[0])) :
+            total = 0 
+            for k in range(len(arr1[0])) :
+                total += arr1[i][k] * arr2[k][j]
+            newArr[i][j] = total
+        
+    return newArr
+
+
     
-    return 0
 
 arr1 = [[1, 2], 
         [3, 4], 
@@ -16,4 +32,6 @@ print(r)
 
 """
 행렬
+?어떻게 곱하지 음..
+
 """

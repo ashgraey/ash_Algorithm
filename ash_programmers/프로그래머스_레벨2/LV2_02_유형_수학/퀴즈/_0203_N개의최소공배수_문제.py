@@ -1,14 +1,23 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/12953
 
-def solution(arr):
-    a = 0
+# 유클리드호제법(최대공약수 구하기)
+def gcd(a, b) :
+    if b == 0 :
+        return a # a가 최대공약수
+    else :
+        return gcd(b, a % b) # a = b, b = a % b
 
+# 최대공약수로 최소공배수 구하는 공식 : a * b // (a와b의 최대공약수)
+def solution(arr):
+    a = arr[0]
+    for i in range(1, len(arr)) :
+        b = arr[i]
+        a = a * b // gcd(a, b)
     return a
 
 arr =[2,6,8,14]
 
 r = solution(arr)
-
 print(r)
 
 """
@@ -21,7 +30,7 @@ def gcd(a , b):
         return gcd(b , a % b)
 =============================
 [2] a와 b의 최소공배수
-    [정답] a * b // a와b의 최대공약수
+    [정답] a * b // (a와b의 최대공약수)
 
 [3] a , b , c , d의 최소공배수 구하기
     a와b의 최소공배수를 구하고 그값이 a1이면
