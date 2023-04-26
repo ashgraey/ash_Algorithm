@@ -56,3 +56,6 @@ while True:
 print(st)
 st = st[1:] # 맨앞의 0을 자른다. 
 print(st)
+
+# 2 * 1 / 2 * 2 / 2 * 4 / 2 * 8 
+print(2 ** 4)

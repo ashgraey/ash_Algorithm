@@ -6,6 +6,7 @@ def getOneStr(s):
     for i in range(len(s)):
         if s[i] == '1':
             st += s[i]
+    # print("st : ", st)
     return st
 
 def getBinary(n):
@@ -36,15 +37,15 @@ def solution(s):
         
         tempstr = s
         s = getOneStr(s)
-        c = len(tempstr) - len(s)
+        c = len(tempstr) - len(s) # 6
         answer[1] += c
         answer[0] += 1
         s = getBinary(len(s))
-       # print(s)
+        print(s)
     return answer
 
 s = "110010101001"
-
+print("len s :", len(s))
 r = solution(s)
 print(r)
 
