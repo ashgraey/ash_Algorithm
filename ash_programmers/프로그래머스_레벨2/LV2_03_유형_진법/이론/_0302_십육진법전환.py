@@ -12,6 +12,7 @@ while True:
         break
     b *= 16
 print(a , b) 
+
 st = ''
 while True:
     if b == 0:
