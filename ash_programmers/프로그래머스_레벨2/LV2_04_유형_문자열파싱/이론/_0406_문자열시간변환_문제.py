@@ -30,7 +30,7 @@ for i in range(len(time)) :
         # result.append(temp2)
         temp2 = []
     
-    temp2.append(((int(time[i][0]) * 60)) + int(time[0][1]))
+    temp2.append(((int(time[i][0]) * 60)) + int(time[0][1])) # 분단위를 더하면 된다. 
     # result.append(temp2)
     cnt += 1
     if cnt == 2 :

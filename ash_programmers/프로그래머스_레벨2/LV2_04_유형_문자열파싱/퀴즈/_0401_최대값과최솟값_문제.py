@@ -2,9 +2,23 @@
 
 def solution(s):
     answer = ''
+    s = s.split(" ")
+    # print(s)
+    for i in range(len(s)) :
+        s[i] = int(s[i])
+    # print(s)
+    a = max(s)
+    b = min(s)
+    # print(a)
+    answer += str(b)
+    answer += " "
+    answer += str(a)
+
     return answer
 
 s = "1 2 3 4"
+s = "-1 -2 -3 -4"
+s = "-1 -1"
 r = solution(s)
 print(r)
 
