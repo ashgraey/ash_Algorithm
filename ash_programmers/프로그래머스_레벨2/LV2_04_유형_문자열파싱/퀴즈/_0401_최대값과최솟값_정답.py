@@ -3,7 +3,7 @@
 def solution(s):
     answer = ''
     s = s.split(" ")
-    a = list(map(int , s))
+    a = list(map(int , s)) # 반복문 안 돌리고 맵으로 정수 변환 => 다시 리스트로
     mx = max(a)
     mn = min(a)
     st = ""
