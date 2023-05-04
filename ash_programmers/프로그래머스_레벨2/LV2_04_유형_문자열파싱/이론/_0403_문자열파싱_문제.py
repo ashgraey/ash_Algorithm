@@ -16,8 +16,32 @@
 """
 
 s = "e=m*c^2"
-s = "shake hands"
+# s = "shake hands"
+abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
+answer = [] 
+# result = []
+for i in range(len(s) - 1) :
+    temp = ""
+    temp += s[i]
+    temp += s[i + 1]
+    # result.append(temp)
+
+    cnt = 0 
+    for j in temp :
+        if j in abc :
+            cnt += 1 
+        
+    
+    if cnt == 0 or cnt == 1 : 
+        pass
+    else :
+        answer.append(temp)
+        
+
+print(s)
+# print(result)
+print(answer)
 
 
 

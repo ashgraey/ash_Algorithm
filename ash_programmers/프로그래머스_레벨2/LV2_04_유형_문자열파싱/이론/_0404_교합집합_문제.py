@@ -9,3 +9,16 @@
 a = [1,4,3,7]
 b = [1,1,2,3,4,5,6]
 
+
+for i in range(len(a)) :
+    b.append(a[i])
+
+c = set(b)
+print(c) # 합집합 : 두 집합 간의 중복을 제거한 집합
+print(b)
+for i in range(len(c)) :
+    if c[i] in b :
+        idx = b.index(c[i])
+        del(b[idx])
+print(b) 
+

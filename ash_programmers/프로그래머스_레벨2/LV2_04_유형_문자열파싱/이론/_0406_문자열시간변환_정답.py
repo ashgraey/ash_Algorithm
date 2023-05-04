@@ -25,6 +25,6 @@ for i in range(len(arr)):
 
     total1 = a * 60 + b
     total2 = c * 60 + b
-   
+    print(a, b, c, d)
     brr.append(total2-total1)
 print(brr)

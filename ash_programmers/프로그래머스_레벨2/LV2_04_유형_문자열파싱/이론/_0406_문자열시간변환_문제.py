@@ -1,4 +1,4 @@
-
+import math
 arr = ["12:04,13:00" , "21:47,23:45"]
 
 brr = []
@@ -9,3 +9,43 @@ brr = []
 
 brr = [60, 120]
 """
+time = []
+for i, v in enumerate(arr) :
+    temp = []
+    coin = v.split(",")
+    coin[0] = coin[0].split(":")
+    coin[1] = coin[1].split(":")
+    time.append(coin[0])
+    time.append(coin[1])
+
+# print(time)
+for i in time :
+    print(i)
+
+result = []
+temp2 = []
+cnt = 0
+for i in range(len(time)) :
+    if i % 2 == 0 :
+        # result.append(temp2)
+        temp2 = []
+    
+    temp2.append(((int(time[i][0]) * 60)) + int(time[0][1]))
+    # result.append(temp2)
+    cnt += 1
+    if cnt == 2 :
+        result.append(temp2)
+        cnt = 0 
+    # print(i)
+print(result)
+
+total = []
+for i in range(len(result)) :
+    tot  = result[i][0] - result[i][-1]
+
+    if tot < 0 :
+        tot = -tot
+    
+    total.append(tot)
+
+print(total)

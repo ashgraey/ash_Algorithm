@@ -9,14 +9,12 @@ print(b)
 """
 [2] 문자열 리스트를 숫자 리스트로 변환
 """
-
 c = list(map(int, b))
 print(c)
 
 """
 [3] 숫자 리스트를 문자리스트로 변환
 """
-
 d = list(map(str , c))
 print(d)
 

@@ -24,3 +24,17 @@ a = [
     ["x","x","o","x"],
     ["x","o","x","o"],
 ]
+
+for i in range(len(a)) : # x축
+    for j in range(len(a)) :
+        if a[j][i] == "o" :
+
+            temp = ""
+            for k in range(j+1, len(a)) :
+                if a[k][i] == "x" :
+                    temp = "x"
+                    a[k][i] = a[j][i] 
+                    a[j][i] = temp
+    
+for i in a :    
+    print(i)
