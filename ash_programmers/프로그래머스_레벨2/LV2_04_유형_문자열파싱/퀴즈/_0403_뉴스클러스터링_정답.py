@@ -23,22 +23,27 @@ def solution(str1, str2):
     print(arr1, arr2)
 
     c1 = 0
-    c2 = len(arr1) + len(arr2)
+    c2 = len(arr1) + len(arr2) # 총 길이
+    # 자카드 유사도 없을 경우
     if c2 == 0:
         return 65536
     
     for v in arr1:
         if v in arr2:
-            c1 += 1
+            c1 += 1 # 교집합 카운트
             index = arr2.index(v)
             del(arr2[index])  
-    c2 = c2 - c1
-    # print(c1 , c2)
+    c2 = c2 - c1 # 합집합
+    print(c1 , c2)
+    print(arr1)
+    print(arr2)
     result = int(c1 / c2 * 65536)
     return result
 
 str1 = "handshake"
 str2 = "shake hands"
+str1 = "aa1+aa2"
+str2 = "AAAA1"
 
 r = solution(str1 , str2)
 print(r)

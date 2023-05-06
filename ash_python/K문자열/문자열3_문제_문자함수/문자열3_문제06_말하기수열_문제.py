@@ -14,3 +14,17 @@
 
 a = "1"
 
+for i in range(10) :
+    temp = a 
+    a = ""
+    cnt = 1 
+    for j in range(len(temp) - 1) :
+        if temp[j] == temp[j + 1] :
+            cnt += 1
+        else :
+            a += temp[j]
+            a += str(cnt)
+            cnt = 1 
+    a += temp[len(temp) -1]
+    a += str(cnt)
+    print(i + 2,":", a)
