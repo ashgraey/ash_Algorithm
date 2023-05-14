@@ -18,3 +18,5 @@ for i in range(len(word)) :
 arr = sorted(arr)
 for v in arr :
     print(v)
+
+

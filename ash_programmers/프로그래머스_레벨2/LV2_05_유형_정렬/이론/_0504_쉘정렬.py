@@ -18,8 +18,6 @@ def shell_sort(arr):
                 j -= gap
     pass
 
-
-
 a = [34,65,3,5,8,9,12,2,5,100]
 print(a)
 shell_sort(a)
