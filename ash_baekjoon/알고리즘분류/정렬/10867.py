@@ -18,5 +18,6 @@ n_list = list(map(int, input().split()))
 
 n_list = list(set(n_list))
 n_list.sort()
-for v in n_list :
-    print(v, end = " ")
+# for v in n_list :
+#     print(v, end = " ")
+print(*n_list) # 반복문 없이 배열을 요소를 출력하는 방법
