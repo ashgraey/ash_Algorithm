@@ -9,3 +9,9 @@
 	[정답] 
 		7
 '''
+class_tot = 31
+boy = 3
+girl = boy * 3
+not_service = class_tot - (boy + girl)
+service = boy + girl
+print(not_service - service)

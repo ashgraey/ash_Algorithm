@@ -9,3 +9,8 @@
   	[정답] 
   		5
 '''
+
+class_tot = 30
+class_boy = 16
+class_girl_service = 3 * 3
+print(class_tot - (class_boy + class_girl_service))

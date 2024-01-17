@@ -12,3 +12,10 @@
 	[정답]
 		12,400
 '''
+cash = 50000
+movie = 12000
+popcorn = (12000 // 10) * 6
+# print(popcorn)
+coke = popcorn - 4000
+print(cash - ((movie * 2) + popcorn + (coke * 2)))
+

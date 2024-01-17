@@ -7,3 +7,7 @@
  	[정답]
  		519120
 '''
+
+failure = round(12000 * 0.03)
+pay = (12000 + failure) * 42
+print(pay)

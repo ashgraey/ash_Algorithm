@@ -6,3 +6,8 @@
 	[정답]
 		1700
 '''
+
+one_apple = 750 / 3
+one_mandarin = 840 / 6
+
+print(one_apple * 4 + one_mandarin * 5)

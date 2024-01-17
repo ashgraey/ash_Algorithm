@@ -15,3 +15,12 @@
 	[정답] 
 		62400
 '''
+
+bus = 1200
+subway = 1100
+HomeToEdu = 1300
+HomeToSchool = 1200
+WeekHomeToEdu = subway * 3 + HomeToEdu * 3
+WeekHomeToSchool = bus * 5 + HomeToSchool * 2
+WeekTransitionPay = WeekHomeToEdu + WeekHomeToSchool
+print(WeekTransitionPay * 4)

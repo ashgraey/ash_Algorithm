@@ -10,3 +10,9 @@
 		12
         600
 '''
+pencil_case = 4000
+book = 700
+pay = 13000 - pencil_case
+book_cnt = pay // book
+book_change = pay % book
+print(book_cnt, book_change)

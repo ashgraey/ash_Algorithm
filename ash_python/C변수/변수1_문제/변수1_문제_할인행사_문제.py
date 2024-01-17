@@ -7,3 +7,10 @@
 	[정답] 
 		3200
 '''
+
+cash = 10000
+price = 1200
+discount = (6 // 3) * 200
+
+change = cash - (price * 6) + discount
+print(change)

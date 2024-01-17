@@ -14,3 +14,9 @@
 	 [정답] 
         58
 '''
+win = 3 
+draw = 1 
+rose = 2
+start = 50
+position = start + ((win * 4) + (draw * 2) - (rose * 3))
+print(position)

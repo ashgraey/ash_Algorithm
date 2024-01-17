@@ -11,3 +11,10 @@
  	[정답] 
  		25500
 '''
+
+ham = 2500
+egg = 3000
+carot = 2000
+
+cash = ham * 3 + egg * 2 + carot * 6
+print(cash)
