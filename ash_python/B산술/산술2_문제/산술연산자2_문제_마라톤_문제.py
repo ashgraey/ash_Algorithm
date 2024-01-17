@@ -6,3 +6,6 @@
 	   	
 	   	[정답] 337.27
 '''
+one_min_distance = 13828 / 123
+three_min_distance = round(one_min_distance * 3, 2)
+print(three_min_distance)

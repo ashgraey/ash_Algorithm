@@ -6,3 +6,7 @@
 	[정답] 
 		[정답] 4
 '''
+
+one_apple = 32 / 4
+one_mandarin = 12 / 3
+print(round(one_apple - one_mandarin))

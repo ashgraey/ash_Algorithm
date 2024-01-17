@@ -11,3 +11,8 @@
 	[정답] 
 		131600
 '''
+
+normal_pay = 9400 * 8
+add_pay = (9400 * 1.5) * 4
+total_pay = normal_pay + add_pay
+print(round(total_pay))

@@ -6,3 +6,7 @@
 	[정답] 
 		[정답] 218.42
 '''
+apple = 140.1
+mandarin = 78.32
+total = apple + mandarin
+print(total)

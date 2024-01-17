@@ -7,3 +7,7 @@
 	[정답] 
 		8
 '''
+eraser = 12
+pen = 7
+pencil = 27 - (eraser + pen)
+print(pencil)

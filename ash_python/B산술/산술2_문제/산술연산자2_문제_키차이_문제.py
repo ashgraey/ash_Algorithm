@@ -9,4 +9,10 @@
 		[정답] 9.67
 '''
 
+min = 184
+chul = 165
+hee = 160
+avg = (min + chul + hee) / 3
+print(round(avg - hee,2))
+
 

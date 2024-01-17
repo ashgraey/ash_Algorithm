@@ -5,3 +5,8 @@
 	[정답] 
 		14
 '''
+
+class_tot = 31
+boy = 17
+girl = class_tot - boy
+print(girl)

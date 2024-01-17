@@ -7,3 +7,8 @@
 	[정답]
 		8300
 '''
+cash = 10000
+apple = 200
+mandarin = 110
+change = cash - ((apple * 3) + (mandarin * 10))
+print(change)
