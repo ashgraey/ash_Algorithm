@@ -1,0 +1,6 @@
+N = int(input())
+
+for i in range(N) :
+    name = input()
+    i += 1
+    print(str(i) + ". " + name)

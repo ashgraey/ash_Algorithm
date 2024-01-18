@@ -1,0 +1,24 @@
+while True :
+    N = input()
+    
+    if N == "0" :
+        break 
+
+    margin = 2 + (len(N) - 1)
+    width = 0
+
+    for i in N :
+        if i == "1" :
+            width += 2
+        elif i == "0" :
+            width += 4
+        else : 
+            width += 3
+        
+    
+    width += margin
+    print(width)
+
+    
+
+    
