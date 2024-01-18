@@ -1,0 +1,16 @@
+vowel = "aeiouAEIOU"
+
+while True :
+    n = input()
+    cnt = 0
+
+    if n == "#" :
+        break
+
+    for i in n : 
+        for j in vowel : 
+            if i == j :
+                cnt += 1
+    
+    print(cnt)
+

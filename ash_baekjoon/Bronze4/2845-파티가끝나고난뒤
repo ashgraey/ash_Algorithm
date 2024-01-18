@@ -1,0 +1,11 @@
+L, P = map(int, input().split())
+participant = list(map(int, input().split()))
+
+party = L * P
+
+# print(participant)
+for i in participant : 
+    if i == party :
+        print("0", end = " ")
+    else :
+        print(i - party, end = " ")

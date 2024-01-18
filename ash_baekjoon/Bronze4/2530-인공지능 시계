@@ -1,0 +1,83 @@
+
+h, m, s = map(int, input().split())
+# print(now_time)
+cooking_time = int(input())
+# print(cooking_time)
+# if cooking_time >= 3600 :
+#     cooking_time_hour = cooking_time // 3600
+#     cooking_time_min = (cooking_time % 3600) // 60
+#     cooking_time_sec = (cooking_time % 3600) % 60
+    
+#     now_time[0] += cooking_time_hour
+#     now_time[1] += cooking_time_min
+#     now_time[2] += cooking_time_sec
+# else : 
+#     cooking_time_min = cooking_time // 60
+#     cooking_time_sec = cooking_time % 60
+#     # print(cooking_time_min, cooking_time_sec)
+#     now_time[1] += cooking_time_min
+#     now_time[2] += cooking_time_sec
+
+# for i in now_time :
+#     print(i, end = " ")
+
+# 틀렷습니다
+# cook_time_sec = cooking_time % 60
+# cook_time_min = (cooking_time - cook_time_sec) // 60
+
+# # sec 먼저 작업
+# now_time[2] += cook_time_sec
+# now_time[1] += cook_time_min
+
+# while True :
+#     if now_time[1] >= 60 :
+#         now_time[0] += 1
+#         now_time[1] -= 60
+#     if now_time[2] >= 60 :
+#         now_time[1] += 1
+#         now_time[2] -= 60
+    
+#     if now_time[1] < 60 and now_time[2] < 60 :
+#         break
+
+# if now_time[0] == 24 :
+#     now_time[0] = 0
+
+# for i in now_time :
+#     print(i, end = " ")
+
+cook_time_hour = cooking_time // 3600
+cook_time_min = (cooking_time % 3600) // 60
+cook_time_sec = (cooking_time % 3600) % 60
+
+# print(cook_time_hour, cook_time_min, cook_time_sec)
+h += cook_time_hour
+m += cook_time_min
+s += cook_time_sec
+
+
+# while True :
+#     if s >= 60 :
+#         s -= 60
+#         m += 1
+#     elif m >= 60 :
+#         m -= 60
+#         h += 1
+#     elif h >= 24 :
+#         h = 0
+#     else :
+#         break
+
+# print(h, m, s)
+
+# 다 풀었는데 반복문써서 틀림 ㅡㅡ
+if s >= 60 :
+    s %= 60
+    m += 1
+if m >= 60 :
+    m %= 60
+    h += 1
+if h >= 24 : 
+    h %= 24
+
+print(h, m, s)
