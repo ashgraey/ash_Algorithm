@@ -1,0 +1,40 @@
+S1, S2, S3 = map(int, input().split())
+
+s1_list = []
+for i in range(S1) :
+    s1_list.append(i + 1)
+
+s2_list = []
+for i in range(S2) :
+    s2_list.append(i + 1)
+
+s3_list = []
+for i in range(S3) :
+    s3_list.append(i + 1)
+
+# print(s1_list, s2_list, s3_list)
+sub_list = []
+for i in s1_list :
+    # sub_total = 0
+    for j in s2_list :
+        for k in s3_list :
+            sub_list.append(i + j + k)
+
+set_list = list(set(sub_list))
+# print(set_list)
+
+cnt = 0 
+cnt_list = []
+for i in set_list : 
+    cnt = sub_list.count(i)
+    cnt_list.append(cnt)
+# print(cnt_list)    
+max_cnt = max(cnt_list)
+
+for i in range(len(cnt_list)) :
+    if cnt_list[i] == max_cnt :
+        index = i 
+        break
+
+result = int(set_list[i])
+print(result)

@@ -1,0 +1,43 @@
+N = int(input())
+
+purse_list = []
+for _ in range(N) :
+    a, b, c = map(int, input().split())
+
+    if a == b == c :
+        purse_list.append(10000 + (a * 1000))
+    elif a == b : 
+        purse_list.append(1000 + (a * 100))
+    elif a == c :
+        purse_list.append(1000 + (a * 100))
+    elif b == c :
+        purse_list.append(1000 + (b * 100))
+    else :
+        purse_list.append(max(a,b,c) * 100)
+
+print(max(purse_list))
+
+# purse_list = []
+# for _ in range(N) :
+#     dice = list(map(int, input().split()))
+    
+#     temp = dice[0]
+#     cnt = 1
+#     duplication = 0
+#     for i in range(len(dice) - 1) :
+#         if temp == dice[i + 1] :
+#             cnt += 1
+#             duplication = temp
+#         else :
+#             temp = dice[i + 1]
+    
+#     if cnt == 1 :
+#         dice_max = max(dice)
+#         purse_list.append(dice_max * 100)
+#     elif cnt == 2 :
+#         purse_list.append(1000 + (duplication * 100))
+#     elif cnt == 3 : 
+#         purse_list.append(10000 + (duplication * 1000))
+
+# result = max(purse_list)
+# print(result)
