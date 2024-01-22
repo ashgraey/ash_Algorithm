@@ -1,0 +1,18 @@
+numList = list(map(int, input().split()))
+
+numList.sort()
+
+multiple = 1
+
+while True :
+    cnt = 0  
+    for i in numList :
+        if multiple % i == 0 :
+            cnt += 1 
+    
+    if cnt >= 3 :
+        break
+    
+    multiple += 1 
+
+print(multiple)

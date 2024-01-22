@@ -1,0 +1,24 @@
+# Ncnt = int(input())
+
+# NList = list(map(int, input().split()))
+# # print(NList)
+# N = 2
+# while True : 
+#     cnt = 0 
+#     for i in NList :
+#         if N % i == 0 :
+#             cnt += 1
+
+#     if cnt == len(NList) and N != max(NList) :
+#         break
+    
+#     N += 1 
+
+# print(N)
+
+n_cnt = int(input())
+n_list = list(map(int, input().split()))
+
+n_list.sort() 
+print(n_list[0] * n_list[-1])
+# print(n_list.sort())

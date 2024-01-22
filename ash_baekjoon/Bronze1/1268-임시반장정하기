@@ -1,0 +1,39 @@
+N = int(input())
+
+N_list = []
+for _ in range(N) :
+    N_list.append(list(map(int, input().split())))
+
+# print(N_list)
+reverse_NList = []
+for i in range(5) :
+    temp = []
+    for j in range(N) :
+        temp.append(N_list[j][i])
+
+    reverse_NList.append(temp)
+
+# print(reverse_NList) 
+
+cnt_list = []
+for i in range(len(reverse_NList[0])) :
+    cnt_list.append(0)
+
+# print(cnt_list)
+
+for i in range(len(reverse_NList)) :
+    for j in range(len(reverse_NList[i])) :
+        cnt = reverse_NList[i].count(reverse_NList[i][j]) 
+        # print(reverse_NList[i][j])
+        # print(cnt)
+        if cnt >= 2 : 
+            cnt_list[j] += 1
+
+max_cnt_num = max(cnt_list)
+
+for i in cnt_list :
+    if max_cnt_num == i :
+        result = cnt_list.index(i) + 1
+        break
+
+print(result)
