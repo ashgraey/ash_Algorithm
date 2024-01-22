@@ -16,7 +16,6 @@ while True :
     num = int(num)
     num += 1
     num = str(num)
-    
 
 
 print(num)

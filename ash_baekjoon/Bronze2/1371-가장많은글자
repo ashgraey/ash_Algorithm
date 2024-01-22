@@ -1,0 +1,45 @@
+# import sys
+# abc = "abcdefghijklmnopqrstuvwxyz"
+
+# # word_cklist = []
+# # for _ in range(len(abc)) :
+# #     word_cklist.append(0)
+# # print(word_cklist)
+
+# # word_input = ''
+# # while True :
+# #     try :
+# #         word_input = input()
+# #         print(word_input)
+# #         for i in abc :
+# #             for j in word_input :
+# #                 if i == j :
+# #                     word_cklist[abc.index(i)] += 1
+# #                     # print(abc.index(i))
+
+# #     # if len(word_input) == 0 :
+# #     #     break
+# #     except :
+# #         break
+# word_input = sys.stdin.read()
+
+# # print(word_input)
+# max_num = max(word_cklist)
+
+# # cnt = 0
+# # idx = 0
+# # idx_list = []
+# # for i in word_cklist :
+# #     if i == max_num : 
+# #         idx = cnt
+# #         idx_list.append(idx)
+# #     cnt += 1
+
+# # # print(idx)
+# # # print(word_cklist)
+# # for i in idx_list :
+# #     print(abc[i], end = "")
+
+import sys
+
+line = sys.stdin.read()
