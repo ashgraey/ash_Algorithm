@@ -1,0 +1,61 @@
+result_list =[]
+cnt = 0
+while True :
+    N = int(input())
+
+    if N == 0 :
+        break
+
+    else : 
+        
+        name_list = []
+        for _ in range(N) :
+            name = input()
+            name_list.append(name)
+        
+        # print(name_list)
+        
+        number_list = []
+        for _ in range(N * 2 - 1) :
+            number = list(input().split())
+            # number_list.append(number)
+            # print(number)
+            number_list.append(number)
+        # number_list = set(number_list)
+        # print(number_list)
+
+        fir_num_list = []
+        for i in range(len(number_list)) :
+            fir_num_list.append(number_list[i][0])
+        
+        # print(fir_num_list)
+
+        # 잘라내서 비교하기
+        a = fir_num_list[:N]
+        b = fir_num_list[N:]
+        # print(a, b)
+
+        # 귀걸이를 받지못한 여학생 찾기
+        for i in a : 
+            ck = False
+            for j in b : 
+                if i == j :
+                    ck = True
+
+            if ck == False :
+                result_num = i
+                cnt += 1 
+                print(cnt, name_list[int(result_num) - 1])
+        
+        # print(result_num)
+        # result_list.append(name_list[int(result_num) - 1])
+
+        # print(reault_list)
+
+# print(result_list)
+
+# for i in range(len(result_list)) :
+#     # print(str(i + 1) + " " + result_list[i])
+#     print(i + 1, end = " ")
+#     print(result_list[i])
+

@@ -1,0 +1,20 @@
+# n = input()
+
+# cnt = 0
+# for i in n : 
+#     if i == "X" :
+#         cnt += 1 
+
+# print(cnt)
+
+# 입력 후 덮을 수 있는지 출력하는 알고리즘 
+# board_table = input()
+
+# x_cnt = board_table.count("X")
+# print(x_cnt)
+
+# if x_cnt % 2 == 1 :
+#     print(-1)
+
+# else :
+   
